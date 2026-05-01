@@ -60,10 +60,10 @@ def register_view(request):
         )
         user.user_id = username
         user.save()
-        create_notification(user, 'Welcome to Hordstake Bank!',
+        create_notification(user, 'Welcome to Co-operative Finance Bank!',
             f'Hello {user.full_name}, your account has been created. Account No: {user.account_number}', 'success')
         login(request, user)
-        messages.success(request, 'Account created! Welcome to Hordstake Bank.')
+        messages.success(request, 'Account created! Welcome to Co-operative Finance Bank.')
         return redirect('dashboard')
     return render(request, 'banking/register.html')
 
